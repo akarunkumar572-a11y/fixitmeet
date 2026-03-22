@@ -13,6 +13,12 @@ import Partner from './pages/public/Partner';
 import PartnerRegister from './pages/public/PartnerRegister';
 import AIBooking from './pages/booking/AIBooking'; // New import for AI Booking
 import AiAssistant from './components/AiAssistant';
+import DoctorTeleconsult from './pages/healthcare/doctor/Teleconsult';
+import DoctorSettings from './pages/healthcare/doctor/Settings';
+import DoctorProfile from './pages/healthcare/doctor/Profile';
+import PatientSettings from './pages/healthcare/patient/Settings';
+import PartnerProfile from './pages/services/partner/Profile';
+import CustomerSettings from './pages/services/customer/Settings';
 
 // Admin & Professional & Patient layouts
 import AdminLayout from './layouts/admin/MainLayout';
@@ -134,9 +140,9 @@ const router = createBrowserRouter([
           { path: 'appointments', element: <ProfessionalAppointments /> },
           { path: 'patients', element: <ProfessionalPatients /> },
           { path: 'prescriptions', element: <ProfessionalPrescriptions /> },
-          { path: 'teleconsult', element: <PlaceholderPage title="Live Teleconsultation Room" role="pro" /> },
-          { path: 'profile', element: <PatientProfile /> },
-          { path: 'settings', element: <PlaceholderPage title="Clinic Settings" role="pro" /> },
+          { path: 'teleconsult', element: <DoctorTeleconsult /> },
+          { path: 'profile', element: <DoctorProfile /> },
+          { path: 'settings', element: <DoctorSettings /> },
       ]},
       { path: 'patient', children: [
           { index: true, element: <PatientDashboard /> },
@@ -146,7 +152,7 @@ const router = createBrowserRouter([
           { path: 'wallet', element: <UserWallet /> },
           { path: 'profile', element: <PatientProfile /> },
           { path: 'book-now', element: <BookNow /> },
-          { path: 'settings', element: <PlaceholderPage title="Account Settings" role="patient" /> },
+          { path: 'settings', element: <PatientSettings /> },
       ]}
     ]
   },
@@ -159,7 +165,7 @@ const router = createBrowserRouter([
           { path: 'dashboard', element: <PartnerDashboard /> },
           { path: 'jobs', element: <ProfessionalJobs /> },
           { path: 'earnings', element: <ProfessionalEarnings /> },
-          { path: 'profile', element: <CustomerProfile /> },
+          { path: 'profile', element: <PartnerProfile /> },
       ]},
       { path: 'user', children: [
           { index: true, element: <CustomerDashboard /> },
@@ -167,7 +173,7 @@ const router = createBrowserRouter([
           { path: 'bookings', element: <CustomerBookings /> },
           { path: 'wallet', element: <CustomerWallet /> },
           { path: 'profile', element: <CustomerProfile /> },
-          { path: 'settings', element: <PlaceholderPage title="User Settings" role="patient" /> },
+          { path: 'settings', element: <CustomerSettings /> },
       ]}
     ]
   }
