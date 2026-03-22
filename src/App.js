@@ -12,6 +12,7 @@ import Register from './pages/public/Register';
 import Partner from './pages/public/Partner';
 import PartnerRegister from './pages/public/PartnerRegister';
 import AIBooking from './pages/booking/AIBooking'; // New import for AI Booking
+import AiAssistant from './components/AiAssistant';
 
 // Admin & Professional & Patient layouts
 import AdminLayout from './layouts/admin/MainLayout';
@@ -173,7 +174,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <AiAssistant />
+    </>
+  );
 }
 
 export default App;
