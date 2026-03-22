@@ -75,19 +75,20 @@ const Prescriptions = () => {
         }
 
         try {
-            await api.put(`/appointments/${selectedAptId}`, {
+            await dispatch(updateAppointment({
+                id: selectedAptId,
                 status: 'completed',
                 diagnosis: diagnosis,
                 medicines: medicines
-            });
+            })).unwrap();
+            
             alert('Prescription saved and appointment completed!');
-            dispatch(getAppointments());
             // Reset form
             setMedicines([]);
             setDiagnosis('');
             setSelectedAptId('');
         } catch (err) {
-            alert('Error saving prescription: ' + (err.response?.data?.message || err.message));
+            alert('Error saving prescription: ' + err);
         }
     };
 

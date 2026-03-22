@@ -7,6 +7,7 @@ import styles from './DoctorDashboard.module.css';
 
 const DoctorDashboard = () => {
     const dispatch = useDispatch();
+    const { user } = useSelector(state => state.auth);
     const { appointments: appts, isLoading } = useSelector(state => state.appointments);
 
     const [greeting, setGreeting] = React.useState('');
@@ -53,7 +54,7 @@ const DoctorDashboard = () => {
     return (
         <div className={styles.dashContainer}>
             <div className={styles.welcomeRow}>
-                <h1>{greeting}, Dr. Michael Chen</h1>
+                <h1>{greeting}, {user?.name || 'Doctor'}</h1>
                 <p>You have {activeSlots} consultations scheduled.</p>
             </div>
             {/* Quick Stats */}

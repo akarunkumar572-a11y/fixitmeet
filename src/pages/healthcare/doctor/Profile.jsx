@@ -1,8 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { FiUser, FiMapPin, FiAward, FiClock, FiFileText, FiCamera, FiEdit3 } from 'react-icons/fi';
-import Card from './DoctorDashboard.module.css'; // Reuse CSS or define inline
+import CardStyles from './DoctorDashboard.module.css'; // Reuse CSS or define inline
 
 const ClinicProfile = () => {
+    const { user } = useSelector(state => state.auth);
     return (
         <div style={{ padding: '32px' }}>
              <header style={{ marginBottom: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
@@ -21,15 +23,15 @@ const ClinicProfile = () => {
                     <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', display: 'flex', gap: '32px', alignItems: 'center' }}>
                          <div style={{ position: 'relative' }}>
                             <div style={{ width: '120px', height: '120px', borderRadius: '30px', background: 'linear-gradient(135deg, #10b981 0%, #064e3b 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '48px', color: 'white', fontWeight: '800' }}>
-                                DR
+                                {(user?.name || 'A').charAt(0).toUpperCase()}
                             </div>
                             <button style={{ position: 'absolute', bottom: '-8px', right: '-8px', background: '#064e3b', color: 'white', border: '4px solid white', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                 <FiCamera />
                             </button>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '24px', fontWeight: '800' }}>Dr. Rajesh Kumar</h2>
-                            <p style={{ color: '#059669', fontWeight: '700', marginBottom: '8px' }}>Senior Cardiologist</p>
+                            <h2 style={{ fontSize: '24px', fontWeight: '800' }}>{user?.name || 'Admin'}</h2>
+                            <p style={{ color: '#059669', fontWeight: '700', marginBottom: '8px' }}>{user?.specialization || 'Healthcare Professional'}</p>
                             <div style={{ display: 'flex', gap: '16px', color: '#64748b', fontSize: '14px' }}>
                                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><FiMapPin /> Mumbai, MH</span>
                                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><FiAward /> 12+ Yrs Experience</span>

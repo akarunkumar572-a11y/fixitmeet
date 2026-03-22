@@ -30,12 +30,13 @@ export const getAppointments = createAsyncThunk('appointments/getAll', async (_,
     }
 });
 
-// Update status (e.g. 'completed' or 'cancelled')
-export const updateAppointmentStatus = createAsyncThunk('appointments/updateStatus', async ({ id, status }, thunkAPI) => {
+// Update record (e.g. status, diagnosis, medicines)
+export const updateAppointment = createAsyncThunk('appointments/update', async (data, thunkAPI) => {
     try {
+        const { id, ...rest } = data;
         const token = thunkAPI.getState().auth.user?.token;
         const config = { headers: { Authorization: `Bearer ${token}` } };
-        const response = await axios.put(API_URL + id, { status }, config);
+        const response = await axios.put(API_URL + id, rest, config);
         return response.data;
     } catch (error) {
         const message = error.response?.data?.message || error.message;
@@ -89,7 +90,7 @@ const appointmentSlice = createSlice({
                 state.message = action.payload;
             })
             // Update mapping
-            .addCase(updateAppointmentStatus.fulfilled, (state, action) => {
+            .addCase(updateAppointment.fulfilled, (state, action) => {
                 const index = state.appointments.findIndex(a => (a.id || a._id) === (action.payload.id || action.payload._id));
                 if (index !== -1) {
                     state.appointments[index] = action.payload;

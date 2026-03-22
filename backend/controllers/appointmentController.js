@@ -92,13 +92,20 @@ const updateAppointmentStatus = asyncHandler(async (req, res) => {
     if (status) {
         appointment.status = status;
     }
+    if (req.body.diagnosis) {
+        appointment.diagnosis = req.body.diagnosis;
+    }
+    if (req.body.medicines) {
+        appointment.medicines = req.body.medicines;
+    }
 
     await appointment.save();
 
     const populatedAppointment = await Appointment.findByPk(appointment.id, {
         include: [
-            { model: User, as: 'patient', attributes: ['name', 'email'] },
-            { model: User, as: 'doctor', attributes: ['name', 'specialization'] }
+            { model: User, as: 'patient', attributes: ['id', 'name', 'email'] },
+            { model: User, as: 'doctor', attributes: ['id', 'name', 'specialization'] },
+            { model: Service, as: 'service' }
         ]
     });
 
