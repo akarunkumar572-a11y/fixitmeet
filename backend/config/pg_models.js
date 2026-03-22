@@ -126,7 +126,18 @@ const PartnerApplication = sequelize.define('PartnerApplication', {
     status: { type: DataTypes.ENUM('pending', 'approved', 'rejected'), defaultValue: 'pending' }
 }, { timestamps: true });
 
+// 10. AiMemory
+const AiMemory = sequelize.define('AiMemory', {
+    id: { type: DataTypes.UUID, defaultValue: DataTypes.UUIDV4, primaryKey: true },
+    preferences: { type: DataTypes.TEXT },
+    chatHistory: { type: DataTypes.JSONB, defaultValue: [] } // Array of {role, content, timestamp}
+}, { timestamps: true });
+
 // Relationships
+// User <-> AiMemory
+User.hasOne(AiMemory, { foreignKey: 'userId', as: 'aiMemory' });
+AiMemory.belongsTo(User, { foreignKey: 'userId', as: 'user' });
+
 // User <-> Service
 User.hasMany(Service, { foreignKey: 'createdById', as: 'services' });
 Service.belongsTo(User, { foreignKey: 'createdById', as: 'creator' });
@@ -192,5 +203,6 @@ module.exports = {
     Review,
     SupportTicket,
     Notification,
-    PartnerApplication
+    PartnerApplication,
+    AiMemory
 };
