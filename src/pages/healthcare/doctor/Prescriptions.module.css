@@ -1,0 +1,208 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+}
+
+.creatorCard {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formSection h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.select,
+.input,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+    outline: none;
+}
+
+.textarea {
+    height: 120px;
+    resize: none;
+}
+
+.medInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btnAdd {
+    padding: 0 16px;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.medList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.medItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #f1f5f9;
+}
+
+.mName {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.mMeta {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.btnRemove {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.btnPreview {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btnSubmit {
+    flex: 1;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.historyCard {
+    padding: 24px;
+}
+
+.historyCard h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.historyList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.hItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hIcon {
+    width: 36px;
+    height: 36px;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hInfo {
+    flex: 1;
+}
+
+.hPatient {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 13px;
+}
+
+.hMeta {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.hBtn {
+    background: none;
+    border: none;
+    color: #10b981;
+    cursor: pointer;
+}
+
+.viewAll {
+    width: 100%;
+    padding: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}

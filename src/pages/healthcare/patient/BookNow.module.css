@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  padding: 40px;
+  border-radius: 24px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(6, 78, 59, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(251, 191, 36, 0.15);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.header p {
+  font-size: 16px;
+  color: #cbd5e1;
+  position: relative;
+  z-index: 1;
+}
+
+.formCard {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+.bookingForm label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.bookingForm select,
+.bookingForm input,
+.bookingForm textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 8px;
+  border: 2px solid rgba(16, 185, 129, 0.1);
+  background: #fff;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #334155;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bookingForm select:focus,
+.bookingForm input:focus,
+.bookingForm textarea:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.btnSubmit {
+  background: #064e3b;
+  color: #fbbf24;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 24px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(6, 78, 59, 0.25);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btnSubmit:hover {
+  background: #022c22;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(6, 78, 59, 0.35);
+}
+
+.success {
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  text-align: center;
+}
+
+.error {
+  color: #ef4444;
+  background: #fef2f2;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  text-align: center;
+}

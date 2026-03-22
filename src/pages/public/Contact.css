@@ -1,0 +1,147 @@
+.page-container {
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    padding: 80px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(2, 44, 34, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+    color: #0f172a;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: var(--text-muted);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-section {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px 100px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 32px;
+}
+
+.contact-info {
+    padding: 40px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #0f172a;
+}
+
+.contact-info .text-muted {
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.info-icon {
+    font-size: 24px;
+    color: var(--gold);
+}
+
+.info-item h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #0f172a;
+}
+
+.info-item p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    padding: 40px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: calc(50% - 12px);
+}
+
+.form-group.full-width {
+    min-width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    color: #0f172a;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-emerald);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.form-input.textarea {
+    resize: vertical;
+}
+
+.btn-primary.full-width {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

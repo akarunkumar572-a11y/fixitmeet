@@ -1,0 +1,194 @@
+.container {
+    min-height: 100vh;
+    background: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 24px 60px;
+}
+
+.card {
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    padding: 40px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.gold {
+    color: #fbbf24;
+}
+
+.header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+}
+
+.inputGroup input,
+.inputGroup select {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.phoneContainer {
+    width: 100% !important;
+}
+
+.phoneInput {
+    width: 100% !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+    border: 1px solid #e2e8f0 !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+}
+
+.fileGroup label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.fileDrop {
+    border: 2px dashed #e2e8f0;
+    padding: 24px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #94a3b8;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+}
+
+.fileHidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.submitBtn {
+    margin-top: 12px;
+    background: #064e3b;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submitBtn:hover {
+    background: #042f2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(6, 78, 59, 0.2);
+}
+
+.success {
+    text-align: center;
+    padding: 60px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    max-width: 500px;
+}
+
+.success .icon {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+.success h2 {
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.success p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.btnHome {
+    background: #fbbf24;
+    color: #064e3b;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 100px 16px 40px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .submitBtn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

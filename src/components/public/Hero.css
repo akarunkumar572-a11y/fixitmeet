@@ -1,0 +1,30 @@
+.public-hero {
+  background: var(--primary);
+  color: var(--white);
+  padding: var(--xxl) var(--md);
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.public-hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: var(--md);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: var(--lg);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .public-hero h1 {
+    font-size: 28px;
+  }
+}

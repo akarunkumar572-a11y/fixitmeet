@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-emerald: #10b981;
+  --dark-emerald: #064e3b;
+  --deep-bg: #022c22;
+  --gold: #fbbf24;
+  --gold-hover: #f59e0b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(20px);
+  --shadow-glow: 0 20px 40px -10px rgba(16, 185, 129, 0.3);
+  --shadow-gold: 0 20px 40px -10px rgba(251, 191, 36, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background-color: var(--deep-bg);
+  color: var(--text-main);
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* Form resets for system default backgrounds */
+option {
+  background-color: var(--deep-bg);
+  color: var(--text-main);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--dark-emerald) inset !important;
+  -webkit-text-fill-color: var(--text-main) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Global Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, #f59e0b 100%);
+  color: #022c22;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 10px 20px -8px rgba(251, 191, 36, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px -10px rgba(251, 191, 36, 0.6);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 31px;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  background-color: transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: #022c22;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(251, 191, 36, 0.3);
+}
+
+/*
+ * UI Theme Contrast Fixes
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-main);
+  /* Default to white on dark bg */
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* Light Background Content Areas (if any) */
+.light-section {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.light-section h1,
+.light-section h2,
+.light-section h3,
+.light-section h4 {
+  color: #0f172a;
+}
+
+.light-section p {
+  color: #023f30;
+}
+
+/* 2. Alternating Section Backgrounds for Premium Separation */
+/* Apply to all <section> elements to give them distinct boundaries. */
+section {
+  position: relative;
+}
+
+/* Specific Home & Main Page Section Alternation - Light Theme */
+section:nth-of-type(odd) {
+  background-color: #f8fafc;
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+/* Protect sections that are explicitly dark (if any need to be kept dark) */
+section.hero-section {
+  background-color: var(--deep-bg) !important;
+}
+
+/* Ensure headings inside odd/even sections become dark for visibility */
+section:nth-of-type(odd) h1,
+section:nth-of-type(odd) h2,
+section:nth-of-type(odd) h3,
+section:nth-of-type(odd) h4,
+section:nth-of-type(even) h1,
+section:nth-of-type(even) h2,
+section:nth-of-type(even) h3,
+section:nth-of-type(even) h4 {
+  color: #0f172a;
+}
+
+section:nth-of-type(odd) p,
+section:nth-of-type(even) p {
+  color: #475569;
+}
+
+/* Re-apply white text strictly for hero sections */
+section.hero-section h1,
+section.hero-section h2,
+section.hero-section h3,
+section.hero-section h4 {
+  color: var(--text-main) !important;
+}
+
+section.hero-section p {
+  color: var(--text-muted) !important;
+}
+
+/* Glass card: Default to dark text for light backgrounds */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glass-card h1,
+.glass-card h2,
+.glass-card h3,
+.glass-card h4 {
+  color: #083105 !important;
+}
+
+.glass-card p {
+  color: #475569 !important;
+}
+
+/* Override glass-card for DARK backgrounds (like hero) */
+.hero-section .glass-card,
+.dark-section .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-section .glass-card h1,
+.hero-section .glass-card h2,
+.hero-section .glass-card h3,
+.hero-section .glass-card h4,
+.dark-section .glass-card h1,
+.dark-section .glass-card h2,
+.dark-section .glass-card h3,
+.dark-section .glass-card h4 {
+  color: #ffffff !important;
+}
+
+.hero-section .glass-card p,
+.dark-section .glass-card p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Dark text only inside light-section (light bg) – avoids white-on-white */
+.light-section .service-card h3,
+.light-section .testimonial-card h4,
+.light-section .step-card h3 {
+  color: #022c22 !important;
+}
+
+.light-section .service-desc,
+.light-section .testimonial-text,
+.light-section .step-card p {
+  color: #475569 !important;
+}
+
+/* Fallback for components that might still be forced white */
+.white-text {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.dark-text {
+  color: #064e3b !important;
+}
+
+/* Use on white/light cards so text is never white-on-white */
+.card-light-bg,
+.card-light-bg h1,
+.card-light-bg h2,
+.card-light-bg h3,
+.card-light-bg h4,
+.card-light-bg p {
+  color: #0f172a !important;
+}
+
+.card-light-bg p {
+  color: #475569 !important;
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(6, 78, 59, 0.2);
+  color: #064e3b !important;
+  /* Force dark text */
+  padding: 12px 16px;
+  border-radius: 12px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input.form-input,
+select.form-input {
+  color: #064e3b !important;
+}
+
+.form-input:focus {
+  border-color: var(--primary-emerald);
+  background: #fff;
+}
+
+.form-input::placeholder {
+  color: #0d9488;
+  opacity: 0.7;
+}
+
+/* Ensure select indicators are dark */
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23064e3b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}

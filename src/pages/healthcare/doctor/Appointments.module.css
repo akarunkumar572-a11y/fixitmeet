@@ -1,0 +1,200 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.calendarBtn {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+}
+
+.filterTab {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.filterTab.active {
+    background: #10b981;
+    border-color: #10b981;
+    color: #fff;
+}
+
+.mainCard {
+    padding: 0;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 16px 24px;
+    background: #f8fafc;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+.aptId {
+    font-weight: 700;
+    color: #10b981;
+}
+
+.patientInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: #ecfdf5;
+    color: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.pName {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.pMeta {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.scheduleInfo .date {
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.scheduleInfo .time {
+    font-size: 12px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.typeBadge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.video {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.physical {
+    background: #fef3c7;
+    color: #f59e0b;
+}
+
+.statusBadge {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.confirmed {
+    color: #10b981;
+}
+
+.arrived {
+    color: #3b82f6;
+}
+
+.pending {
+    color: #f59e0b;
+}
+
+.scheduled {
+    color: #64748b;
+}
+
+.actionsCell {
+    display: flex;
+    gap: 12px;
+}
+
+.joinBtn {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.moreBtn {
+    background: #f1f5f9;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

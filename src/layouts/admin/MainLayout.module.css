@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  background: #f8fafc;
+  /* Professional light gray background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 40px;
+  flex: 1;
+}

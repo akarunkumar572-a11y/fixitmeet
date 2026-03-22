@@ -1,0 +1,22 @@
+.provider-card h4 {
+  font-size: 18px;
+  margin-bottom: var(--xs);
+  color: var(--primary);
+}
+
+.profession {
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: var(--sm);
+}
+
+.rating {
+  display: flex;
+  gap: var(--sm);
+  color: var(--gray-dark);
+  font-size: 14px;
+}
+
+.eta {
+  color: var(--accent-dark);
+}

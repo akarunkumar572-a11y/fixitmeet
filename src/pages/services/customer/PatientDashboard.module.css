@@ -1,0 +1,391 @@
+.dashContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.heroBanner {
+    background: linear-gradient(135deg, rgba(6, 78, 59, 0.95) 0%, rgba(2, 44, 34, 0.95) 100%);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(6, 78, 59, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBanner::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(251, 191, 36, 0.1);
+    border-radius: 50%;
+    filter: blur(30px);
+}
+
+.heroText h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.blueText {
+    color: #fbbf24;
+}
+
+.heroText p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.btnApoint {
+    background: #fbbf24;
+    color: #064e3b;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.btnApoint:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+}
+
+.sectionCard {
+    margin-bottom: 32px;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.cardHeader h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #064e3b;
+}
+
+.bookingList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bookingItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s;
+}
+
+.bookingItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 78, 59, 0.06);
+}
+
+.drInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.drAvatar {
+    width: 48px;
+    height: 48px;
+    background: #ecfdf5;
+    color: #064e3b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.drName {
+    font-weight: 700;
+    font-size: 15px;
+    color: #0f172a;
+}
+
+.drRole {
+    font-size: 13px;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.timeInfo {
+    text-align: right;
+}
+
+.dateTime {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 4px;
+}
+
+.typeTag {
+    font-size: 11px;
+    background: #ecfdf5;
+    color: #10b981;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.joinBtn {
+    background: #064e3b;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.joinBtn:hover {
+    background: #022c22;
+    transform: scale(1.02);
+}
+
+.reschedule {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reschedule:hover {
+    color: #f59e0b;
+}
+
+/* Reports */
+.uploadBtn {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #064e3b;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.uploadBtn:hover {
+    background: #064e3b;
+    color: #fbbf24;
+}
+
+.reportList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reportItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.reportIcon {
+    font-size: 24px;
+    color: #10b981;
+    background: #ecfdf5;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.reportDetails {
+    flex: 1;
+}
+
+.reportName {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.reportMeta {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.viewReport {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #064e3b;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.viewReport:hover {
+    background: #064e3b;
+    color: #fff;
+}
+
+/* Side Column */
+.healthScoreCard {
+    padding: 24px;
+    text-align: center;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.scoreCircle {
+    width: 120px;
+    height: 120px;
+    border: 8px solid #ecfdf5;
+    border-top-color: #10b981;
+    border-radius: 50%;
+    margin: 24px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+}
+
+.scoreCircle span {
+    font-size: 32px;
+    font-weight: 800;
+    color: #064e3b;
+}
+
+.scoreCircle small {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.healthScoreCard p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.prescCard {
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-top: 24px;
+}
+
+.prescCard h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #064e3b;
+    margin-bottom: 20px;
+}
+
+.prescItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+}
+
+.prescItem strong {
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.prescItem span {
+    font-size: 12px;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.prescItem small {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.viewAllBtn {
+    width: 100%;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #064e3b;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.viewAllBtn:hover {
+    background: #064e3b;
+    color: #fff;
+}

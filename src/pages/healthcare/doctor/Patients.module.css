@@ -1,0 +1,195 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.headerActions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 0 16px;
+    border-radius: 10px;
+    gap: 10px;
+    height: 42px;
+    width: 260px;
+}
+
+.searchBar input {
+    border: none;
+    background: none;
+    font-size: 13px;
+    width: 100%;
+    outline: none;
+}
+
+.searchBar svg {
+    color: #94a3b8;
+}
+
+.btnFilter {
+    height: 42px;
+    padding: 0 16px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btnAdd {
+    height: 42px;
+    padding: 0 20px;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.statsRow {
+    display: flex;
+    gap: 24px;
+}
+
+.statBox {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sVal {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.sLabel {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.mainCard {
+    padding: 0;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 16px 24px;
+    background: #f8fafc;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #475569;
+}
+
+.idCell {
+    font-weight: 700;
+    color: #10b981;
+}
+
+.nameCell {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.intreatment {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+.stable {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.follow-up {
+    background: #fef3c7;
+    color: #f59e0b;
+}
+
+.contactIcons {
+    display: flex;
+    gap: 8px;
+}
+
+.contactIcons button {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.viewBtn {
+    background: #f1f5f9;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #10b981;
+    cursor: pointer;
+}

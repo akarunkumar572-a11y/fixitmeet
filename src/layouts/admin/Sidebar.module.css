@@ -1,0 +1,111 @@
+.sidebar {
+  width: 240px;
+  /* Slimmer for expert look */
+  background: #022c22;
+  color: #f8fafc;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  border-right: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.logo {
+  padding: 0 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1;
+}
+
+.fix {
+  color: #fff;
+}
+
+.meet {
+  color: #fbbf24;
+}
+
+.adminBadge {
+  font-size: 8px;
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.nav {
+  flex: 1;
+  padding: 0 12px;
+  overflow-y: auto;
+}
+
+.navGroup {
+  margin-bottom: 20px;
+}
+
+.groupLabel {
+  padding: 0 12px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(148, 163, 184, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 13.5px;
+  /* Smaller font as requested */
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+}
+
+.active {
+  background: rgba(16, 185, 129, 0.08) !important;
+  color: #10b981 !important;
+}
+
+.icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebarFooter {
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.version {
+  font-size: 11px;
+  color: rgba(148, 163, 184, 0.3);
+}

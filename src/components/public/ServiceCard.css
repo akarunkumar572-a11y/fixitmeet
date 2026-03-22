@@ -1,0 +1,14 @@
+.service-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: var(--sm);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  color: var(--primary-dark);
+}
